@@ -5,6 +5,7 @@ const Input = styled.input.attrs({ type: 'text' })`
   height: 30px;
   font-size: 20px;
   margin-left: 5px;
+  border-radius: 8px;
 `;
 
 const Label = styled.label`
