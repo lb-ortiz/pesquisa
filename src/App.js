@@ -19,6 +19,13 @@ const defaultFilters = {
     $$$: false,
     $$$$: false,
   },
+  zoneRangeFilter: {
+    ZN: false,
+    ZS: false,
+    ZL: false,
+    ZO: false,
+    C: false,
+  },
 };
 
 const defaultHistory = createBrowserHistory();
@@ -63,12 +70,22 @@ class App extends React.Component {
     }));
   };
 
+  setZoneRangeFilter = range => checked => {
+    this.setState(({ zoneRangeFilter }) => ({
+      zoneRangeFilter: {
+        ...zoneRangeFilter,
+        [range]: checked,
+      },
+    }));
+  };
+
   resetAllFilters = () => this.setState(defaultFilters);
 
   render() {
     const {
       restaurants,
       priceRangeFilter,
+      zoneRangeFilter,
       nameFilter,
       loading,
       error,
@@ -81,7 +98,7 @@ class App extends React.Component {
     if (error) {
       return (
         <MainColumn>
-          Sorry, but the restaurant list is unavailable right now
+          Desculpe, a loja está indisponível no momento :(
         </MainColumn>
       );
     }
@@ -92,13 +109,16 @@ class App extends React.Component {
           <Filters
             name={nameFilter}
             priceRange={priceRangeFilter}
+            zoneRange={zoneRangeFilter}
             setNameFilter={this.setNameFilter}
             setPriceRangeFilter={this.setPriceRangeFilter}
+            setZoneRangeFilter={this.setZoneRangeFilter}
             resetAll={this.resetAllFilters}
           />
           <RestaurantList
             restaurants={restaurants}
             priceRangeFilter={priceRangeFilter}
+            zoneRangeFilter={priceRangeFilter}
             nameFilter={nameFilter}
           />
         </MainColumn>

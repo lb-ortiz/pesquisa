@@ -30,6 +30,10 @@ const PriceRange = styled.span`
   font-size: 20px;
 `;
 
+const ZoneRange = styled.span`
+  font-size: 20px;
+`;
+
 const Img = styled.img`
   width: 100%;
 `;
@@ -45,6 +49,7 @@ const RestaurantCard = ({ restaurant }) => (
       <CardTitleRow>
         <CardTitle>{restaurant.name}</CardTitle>
         <PriceRange>{restaurant.priceRange}</PriceRange>
+        <ZoneRange>{restaurant.zoneRange}</ZoneRange>
       </CardTitleRow>
       <Img src={restaurant.imageSrc} alt={restaurant.imageDescription} />
       <Description>{restaurant.description}</Description>
@@ -57,6 +62,7 @@ RestaurantCard.propTypes = {
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     priceRange: PropTypes.string.isRequired,
+    zoneRange: PropTypes.string.isRequired,
     imageSrc: PropTypes.string.isRequired,
     imageDescription: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
