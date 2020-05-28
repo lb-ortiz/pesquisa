@@ -102,7 +102,7 @@ const Filters = ({
       <Checkbox
         label="Centro"
         checked={zoneRange.C}
-        onChange={setPriceRangeFilter('C')}
+        onChange={setZoneRangeFilter('C')}
       />
     </ZoneRangeFields>
     <Button onClick={resetAll}>Clear</Button>

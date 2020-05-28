@@ -118,7 +118,7 @@ class App extends React.Component {
           <RestaurantList
             restaurants={restaurants}
             priceRangeFilter={priceRangeFilter}
-            zoneRangeFilter={priceRangeFilter}
+            zoneRangeFilter={zoneRangeFilter}
             nameFilter={nameFilter}
           />
         </MainColumn>
