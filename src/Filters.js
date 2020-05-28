@@ -30,11 +30,26 @@ const PriceRangeFields = styled.span`
   }
 `;
 
+const ZoneRangeFields = styled.span`
+  margin: 0 20px;
+  display: flex;
+
+  ${mediumScreen} {
+    margin: 10px;
+  }
+
+  ${smallScreen} {
+    flex-direction: column;
+  }
+`;
+
 const Filters = ({
   name,
   priceRange,
+  zoneRange,
   setNameFilter,
   setPriceRangeFilter,
+  setZoneRangeFilter,
   resetAll,
 }) => (
   <FilterRow>
@@ -62,6 +77,34 @@ const Filters = ({
         onChange={setPriceRangeFilter('$$$$')}
       />
     </PriceRangeFields>
+    <ZoneRangeFields>
+      Zone range:
+      <Checkbox
+        label="ZN"
+        checked={zoneRange.ZN}
+        onChange={setZoneRangeFilter('ZN')}
+      />
+      <Checkbox
+        label="ZS"
+        checked={zoneRange.ZS}
+        onChange={setZoneRangeFilter('ZS')}
+      />
+      <Checkbox
+        label="ZL"
+        checked={zoneRange.ZL}
+        onChange={setZoneRangeFilter('ZL')}
+      />
+      <Checkbox
+        label="ZO"
+        checked={zoneRange.ZO}
+        onChange={setZoneRangeFilter('ZO')}
+      />
+      <Checkbox
+        label="Centro"
+        checked={zoneRange.C}
+        onChange={setPriceRangeFilter('C')}
+      />
+    </ZoneRangeFields>
     <Button onClick={resetAll}>Clear</Button>
   </FilterRow>
 );
