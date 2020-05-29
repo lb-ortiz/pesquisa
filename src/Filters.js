@@ -11,11 +11,20 @@ const FilterRow = styled.div`
   padding: 30px;
   font-size: 24px;
   display: flex;
+  background-color: #00510a;
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  border-radius: 10px 20px 80px;
+  box-shadow: 10px 10px 10px 5px black;
+  border-color: #000000;
 
   ${mediumScreen} {
     flex-direction: column;
   }
 `;
+
+
 
 const PriceRangeFields = styled.span`
   margin: 0 20px;
@@ -53,32 +62,9 @@ const Filters = ({
   resetAll,
 }) => (
   <FilterRow>
-    <TextInput label="Search:" value={name} onChange={setNameFilter} />
-    <PriceRangeFields>
-      Price range:
-      <Checkbox
-        label="$"
-        checked={priceRange.$}
-        onChange={setPriceRangeFilter('$')}
-      />
-      <Checkbox
-        label="$$"
-        checked={priceRange.$$}
-        onChange={setPriceRangeFilter('$$')}
-      />
-      <Checkbox
-        label="$$$"
-        checked={priceRange.$$$}
-        onChange={setPriceRangeFilter('$$$')}
-      />
-      <Checkbox
-        label="$$$$"
-        checked={priceRange.$$$$}
-        onChange={setPriceRangeFilter('$$$$')}
-      />
-    </PriceRangeFields>
+    <TextInput label="Procurar:" value={name} onChange={setNameFilter} />
     <ZoneRangeFields>
-      Zone range:
+      Zona:
       <Checkbox
         label="ZN"
         checked={zoneRange.ZN}
@@ -105,7 +91,31 @@ const Filters = ({
         onChange={setZoneRangeFilter('C')}
       />
     </ZoneRangeFields>
-    <Button onClick={resetAll}>Clear</Button>
+    <PriceRangeFields>
+      Preço:
+      <Checkbox
+        label="$"
+        checked={priceRange.$}
+        onChange={setPriceRangeFilter('$')}
+      />
+      <Checkbox
+        label="$$"
+        checked={priceRange.$$}
+        onChange={setPriceRangeFilter('$$')}
+      />
+      <Checkbox
+        label="$$$"
+        checked={priceRange.$$$}
+        onChange={setPriceRangeFilter('$$$')}
+      />
+      <Checkbox
+        label="$$$$"
+        checked={priceRange.$$$$}
+        onChange={setPriceRangeFilter('$$$$')}
+      />
+    </PriceRangeFields>
+    
+    <Button onClick={resetAll}>Limpar</Button>
   </FilterRow>
 );
 

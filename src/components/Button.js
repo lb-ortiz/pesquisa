@@ -4,7 +4,7 @@ const Button = styled.button.attrs({ type: 'button' })`
   height: 30px;
   width: 100px;
   font-size: 20px;
-  background-color: #e79652;
+  background-color: #ffcc2a;
   color: #2b2318;
   border-radius: 2px;
   border: none;
