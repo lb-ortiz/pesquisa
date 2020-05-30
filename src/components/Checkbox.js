@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Input = styled.input.attrs({ type: 'checkbox' })`
-  margin-left: 5px;
+  margin-left: 20px;
 `;
 
 const Label = styled.label`
