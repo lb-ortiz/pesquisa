@@ -11,7 +11,7 @@ const StyledLink = styled(Link)`
 const Card = styled.div`
   display: inline-block;
   width: 100%;
-  max-width: 350px;
+  max-width: 200px;
   margin: 0 5px;
 `;
 
@@ -35,7 +35,8 @@ const ZoneRange = styled.span`
 `;
 
 const Img = styled.img`
-  width: 100%;
+  width: 200px;
+  height: 200px;
 `;
 
 const Description = styled.p`
