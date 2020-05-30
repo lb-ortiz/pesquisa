@@ -66,22 +66,22 @@ const Filters = ({
     <ZoneRangeFields>
       Zona:
       <Checkbox
-        label="ZN"
+        label="Norte"
         checked={zoneRange.ZN}
         onChange={setZoneRangeFilter('ZN')}
       />
       <Checkbox
-        label="ZS"
+        label="Sul"
         checked={zoneRange.ZS}
         onChange={setZoneRangeFilter('ZS')}
       />
       <Checkbox
-        label="ZL"
+        label="Leste"
         checked={zoneRange.ZL}
         onChange={setZoneRangeFilter('ZL')}
       />
       <Checkbox
-        label="ZO"
+        label="Oeste"
         checked={zoneRange.ZO}
         onChange={setZoneRangeFilter('ZO')}
       />
