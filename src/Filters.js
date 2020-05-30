@@ -15,7 +15,7 @@ const FilterRow = styled.div`
   margin-top: 10px;
   margin-bottom: 20px;
 
-  border-radius: 10px 20px 80px;
+  border-radius: 20px 20px 20px 20px;
   box-shadow: 10px 10px 10px 5px black;
   border-color: #000000;
 
