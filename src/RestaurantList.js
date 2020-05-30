@@ -12,11 +12,6 @@ const RestaurantList = ({ restaurants, priceRangeFilter, zoneRangeFilter, nameFi
   const anyPriceSelected = Object.values(priceRangeFilter).some(f => f);
   const anyZoneSelected = Object.values(zoneRangeFilter).some(f => f);
 
-    
-  // const zoneandPriceRange = (anyPriceSelected || anyZoneSelected)
-  //   ? restaurants.filter(restaurant => priceRangeFilter[restaurant.priceRange] || zoneRangeFilter[restaurant.zoneRange])
-  //   : restaurants;
-
   const finalFilter = calculaFilter(anyPriceSelected, anyZoneSelected)
   
   function calculaFilter(anyPriceSelected, anyZoneSelected) {
@@ -30,21 +25,6 @@ const RestaurantList = ({ restaurants, priceRangeFilter, zoneRangeFilter, nameFi
       return restaurants
     }
   }
-    
-  // () => {
-    // if(anyPriceSelected && anyZoneSelected) {
-    //   return restaurants.filter(restaurant => priceRangeFilter[restaurant.priceRange] || zoneRangeFilter[restaurant.zoneRange])
-    // } else {
-    //   return restaurants
-    // }
-    // else if(anyPriceSelected && !anyZoneSelected) {
-    //   return restaurants.filter(restaurant => priceRangeFilter[restaurant.priceRange])
-    // }
-    // else if(!anyPriceSelected && anyZoneSelected) {
-    //   return restaurants.filter(restaurant => zoneRangeFilter[restaurant.zoneRange])
-    // } else {
-    //   return restaurants
-    // }
 
   const filteredRestaurants = finalFilter.filter(
     restaurant =>
